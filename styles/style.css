@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    padding: 30px 0px;
+    padding: 0px;
 
     display: flex;
     flex-direction: column;
@@ -21,6 +21,7 @@ img{
 
 .letterRow{
     display: flex;
+    justify-content: center;
 }
 .letter{
     width: 20px;
@@ -32,4 +33,7 @@ img{
     border-radius: 3px;
     font-size: 20px;
     text-align: center;
+}
+#guessBtn{
+    margin: 10px;
 }
