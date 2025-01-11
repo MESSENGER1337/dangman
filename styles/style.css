@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0px;
     padding: 0px;
 
@@ -10,20 +10,21 @@ body{
     background-color: cadetblue;
 }
 
-img{
+img {
     width: 300px;
 }
 
-#audioControls{
+#audioControls {
     display: flex;
     margin: 12px;
 }
 
-.letterRow{
+.letterRow {
     display: flex;
     justify-content: center;
 }
-.letter{
+
+.letter {
     width: 30px;
     height: 20px;
     margin: 2px;
@@ -34,6 +35,11 @@ img{
     font-size: 20px;
     text-align: center;
 }
-#guessBtn{
+
+#guessBtn {
     margin: 10px;
+}
+
+#hintText {
+    text-transform: uppercase;
 }
