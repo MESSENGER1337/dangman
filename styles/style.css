@@ -14,11 +14,6 @@ img {
     width: 300px;
 }
 
-#audioControls {
-    display: flex;
-    margin: 12px;
-}
-
 .letterRow {
     display: flex;
     justify-content: center;
@@ -26,20 +21,37 @@ img {
 
 .letter {
     width: 30px;
-    height: 20px;
+    height: 25px;
     margin: 2px;
-    padding: 2px;
+    padding: 0px;
 
     border: 2px solid black;
     border-radius: 3px;
     font-size: 20px;
-    text-align: center;
+}
+.letter:hover{
+    background-color:rgb(255, 193, 250);
 }
 
-#guessBtn {
+#selectBtn {
     margin: 10px;
+    height: 25px;
+    width: 120px; 
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 20px;
+}
+#selectBtn:hover{
+    background-color:rgb(255, 193, 250);
+
 }
 
 #hintText {
     text-transform: uppercase;
 }
+
+/* MUSIC STUFF
+#audioControls {
+    display: flex;
+    margin: 12px;
+}*/
