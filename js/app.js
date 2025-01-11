@@ -1,11 +1,11 @@
 const categories = ["colors", "countries", "planets", "cities"];
 const catColors = ["purple", "orange", "maroon", "silver"];
 const hintText = document.getElementById('hintText');
+
 const letterBtn = document.getElementsByClassName('letter');
 let arr = Array.from(letterBtn);
 
-console.log(arr);
-
+// RANDOM CATEGORY_____________________________________________________
 const randomCategory = Math.floor(Math.random() * categories.length);
 category = categories[randomCategory];
 hintText.textContent = category;
@@ -13,10 +13,41 @@ if (category === "colors") {
     var currentCategory = catColors;
 }
 
-const randomWord = Math.floor(Math.random() * currentCategory.length);
-console.log(currentCategory[randomWord]);
+// RANDOM WORD_________________________________________________________
+const currentWord = Math.floor(Math.random() * currentCategory.length);
+console.log(currentCategory[currentWord]);
 
-
+// COUNT LETTERS_______________________________________________________
+function countLetters(currentWord) {
+    return currentWord.length;
+  }
+  
+  function scanForLetters(currentWord, lettersToScan) {
+    let foundLetters = [];
+    for (const letter of currentWord) {
+      if (lettersToScan.includes(letter)) {
+        foundLetters.push(letter);
+      }
+    }
+    return foundLetters;
+  }
+  
+  function createBlankedWord(currentWord) {
+    return "_".repeat(currentWord.length); 
+  }
+  
+  // Example Usage
+//   const word = "basket";
+  const lettersToScan = ["a", "s", "k"];
+  
+  const letterCount = countLetters(word);
+  console.log("Number of letters:", letterCount); // Output: 6
+  
+  const foundLetters = scanForLetters(word, lettersToScan);
+  console.log("Found letters:", foundLetters); // Output: ["a", "s", "k"]
+  
+  const blankedWord = createBlankedWord(word);
+  console.log("Blanked word:", blankedWord); // Output: "______"
 
 
 // let string = "";
