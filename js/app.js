@@ -36,6 +36,28 @@ function scanForLetters(currentWord, lettersToScan) {
 const letterCount = countLetters(currentWord);
 console.log("Number of letters:", letterCount);
 
+// SELECT LETTER_____________________________________________________
+const letterBtn = document.getElementsByClassName('letter');
+const keyboard = Array.from(letterBtn);
+let letterSelected = "";
+keyboard.forEach(letterBtn => {
+    letterBtn.addEventListener('click', (e) => {
+        letterSelected = e.target.innerHTML.slice(0, 1);
+        console.log("Letter selected:", letterSelected);
+    });
+});
+
+// SCAN FOR LETTER___________________________________________________
+const selectBtn = document.getElementById('selectBtn');
+let letterToSearch = "";
+selectBtn.addEventListener('click', (e) => {
+    let letterToSearch = letterSelected;
+    const foundLetter = scanForLetters(currentWord, letterToSearch);
+    console.log("Letter searched:", letterToSearch);
+    console.log("Letter found:", foundLetter);
+});
+
+
 // BLANK WORD_________________________________________________________
 let wordDisplay = document.getElementById('wordDisplay');
 function createBlankedWord(currentWord) {
@@ -44,30 +66,6 @@ function createBlankedWord(currentWord) {
 const blankedWord = createBlankedWord(currentWord);
 console.log("Blanked word:", blankedWord);
 wordDisplay.textContent = blankedWord;
-
-// SELECT LETTER_____________________________________________________
-const letterBtn = document.getElementsByClassName('letter');
-const selectBtn = document.getElementById('selectBtn');
-const keyboard = Array.from(letterBtn);
-
-keyboard.forEach(letterBtn => {
-    let letterSelected = "";
-    letterBtn.addEventListener('click', (e) => {
-        letterSelected = e.target.innerHTML.slice(0, 1);
-        console.log("Letter selected:", letterSelected);
-    });
-});
-
-
-
-
-// SCAN FOR LETTER___________________________________________________
-const letterToScan = "R";
-const foundLetter = scanForLetters(currentWord, letterToScan);
-console.log("Found letter:", foundLetter);
-
-
-
 
 
 
