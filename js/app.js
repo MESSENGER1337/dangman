@@ -11,11 +11,12 @@ const categories = {
 let hintText = document.getElementById('hintText');
 const randomCategoryKey = Object.keys(categories)[Math.floor(Math.random() * Object.keys(categories).length)];
 const currentCategory = categories[randomCategoryKey];
+console.log("Random Category:", randomCategoryKey);
 hintText.textContent = randomCategoryKey;
 
 // RANDOM WORD_________________________________________________________
 const currentWord = currentCategory[Math.floor(Math.random() * currentCategory.length)];
-console.log("Random word:", currentWord);
+console.log("Random Word:", currentWord);
 
 // GET LETTERS_______________________________________________________
 function scanForLetters(currentWord, lettersToScan) {
@@ -36,7 +37,6 @@ keyboard.forEach(letterBtn => {
     letterBtn.addEventListener('click', (e) => {
         // letterBtn.classList.toggle('clicked');
         letterSelected = e.target.innerHTML.slice(0, 1);
-        console.log("Letter selected:", letterSelected);
     });
 });
 
@@ -52,13 +52,31 @@ function createBlankedWord(currentWord) {
         } else {
             return "_";
         }
-    }).join(" ");
+    }).join("");
+
 }
 
 function updateWordDisplay() {
     const blankedWord = createBlankedWord(currentWord);
     wordDisplay.textContent = blankedWord;
+    console.log("Word:", currentWord);
+    console.log("Guess:", wordDisplay.textContent);
 }
+
+// WIN GAME__________________________________________________________
+const newGameBtn = document.getElementById('newGameBtn');
+function gameWin(){
+    console.log("YOU WIN!");
+    updateWordDisplay();
+    hintText.textContent="YOU WIN!!!";
+    
+    selectBtn.classList.add('hidden');  // Hide SELECT button
+    newGameBtn.classList.remove('hidden');  // Show NEW GAME button
+
+
+}
+
+
 
 updateWordDisplay();
 
@@ -71,9 +89,36 @@ selectBtn.addEventListener('click', (e) => {
     if (foundLetter) {
         guessedLetters.add(letterToSearch);
     }
-    console.log("Letter searched:", letterToSearch);
-    console.log("Letter found:", foundLetter);
-
+    console.log("Letter Searched:", letterToSearch);
+    console.log("Letter Found:", foundLetter.toString());
 
     updateWordDisplay();
+
+    if (wordDisplay.textContent === currentWord){
+        gameWin();
+    }
+
 });
+
+
+
+
+
+// WIN          
+// if wordDisplay.textContent === currentWord or something
+
+
+
+
+
+
+// LOSE
+// if wrong then next pic
+// if man pic = last pic
+
+// KEY CHANGE
+// one at a time - if any letter is clicked then unclick, then click new
+// select refresh - if letterClicked === foundLetter change to clicpPermenant
+
+// NEW MAN
+// on load, refresh, win and lose - return a new man

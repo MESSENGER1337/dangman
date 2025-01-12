@@ -38,20 +38,31 @@ img {
     background-color: magenta;
 } */
 
-#selectBtn {
+#selectBtn, #newGameBtn {
     margin: 10px;
+    padding: 0px;
     height: 25px;
-    width: 120px;
+    width: 180px;
     border: 2px solid black;
     border-radius: 3px;
     font-size: 20px;
 }
 
 #selectBtn:hover,
-#selectBtn:active {
+#selectBtn:active,
+#newGameBtn:hover,
+#newGameBtn:active {
     background-color: magenta;
+}
+
+.hidden{
+    display: none;
 }
 
 #hintText {
     text-transform: uppercase;
+}
+
+#wordDisplay{
+    letter-spacing: 10px;
 }
