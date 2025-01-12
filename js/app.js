@@ -72,9 +72,12 @@ function gameWin(){
     
     selectBtn.classList.add('hidden');  // Hide SELECT button
     newGameBtn.classList.remove('hidden');  // Show NEW GAME button
-
-
 }
+
+// NEW GAME_____________________________________________________________
+newGameBtn.addEventListener('click', () => {
+    location.reload();
+})
 
 
 
