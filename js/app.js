@@ -34,7 +34,7 @@ const keyboard = Array.from(letterBtn);
 let letterSelected = "";
 keyboard.forEach(letterBtn => {
     letterBtn.addEventListener('click', (e) => {
-        letterBtn.classList.toggle('clicked');
+        // letterBtn.classList.toggle('clicked');
         letterSelected = e.target.innerHTML.slice(0, 1);
         console.log("Letter selected:", letterSelected);
     });
