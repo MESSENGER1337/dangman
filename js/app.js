@@ -1,78 +1,78 @@
-const categories = ["colors", "countries", "planets", "cities"];
-const catColors = ["purple", "orange", "maroon", "silver"];
-const hintText = document.getElementById('hintText');
+const categories = {
+    colors: ["PURPLE", "ORANGE", "MAROON", "SILVER"],
+    countries: ["FRANCE", "JAPAN", "BRAZIL", "CANADA"],
+    planets: ["MARS", "VENUS", "JUPITER", "SATURN"],
+    cities: ["PARIS", "TOKYO", "LONDON", "TORONTO"],
+    fruits: ["APPLE", "BANANA", "ORANGE", "GRAPE"],
+    animals: ["DOG", "CAT", "ELEPHANT", "LION"]
+};
 
-const letterBtn = document.getElementsByClassName('letter');
-let arr = Array.from(letterBtn);
 
 // RANDOM CATEGORY_____________________________________________________
-const randomCategory = Math.floor(Math.random() * categories.length);
-category = categories[randomCategory];
-hintText.textContent = category;
-if (category === "colors") {
-    var currentCategory = catColors;
-}
+let hintText = document.getElementById('hintText');
+const randomCategoryKey = Object.keys(categories)[Math.floor(Math.random() * Object.keys(categories).length)];
+const currentCategory = categories[randomCategoryKey];
+hintText.textContent = randomCategoryKey;
 
 // RANDOM WORD_________________________________________________________
-const currentWord = Math.floor(Math.random() * currentCategory.length);
-console.log(currentCategory[currentWord]);
+const currentWord = currentCategory[Math.floor(Math.random() * currentCategory.length)];
+console.log("Random word:", currentWord);
 
 // COUNT LETTERS_______________________________________________________
 function countLetters(currentWord) {
     return currentWord.length;
-  }
-  
-  function scanForLetters(currentWord, lettersToScan) {
+}
+function scanForLetters(currentWord, lettersToScan) {
     let foundLetters = [];
     for (const letter of currentWord) {
-      if (lettersToScan.includes(letter)) {
-        foundLetters.push(letter);
-      }
+        if (lettersToScan.includes(letter)) {
+            foundLetters.push(letter);
+        }
     }
     return foundLetters;
-  }
-  
-  function createBlankedWord(currentWord) {
-    return "_".repeat(currentWord.length); 
-  }
-  
-  // Example Usage
-//   const word = "basket";
-  const lettersToScan = ["a", "s", "k"];
-  
-  const letterCount = countLetters(word);
-  console.log("Number of letters:", letterCount); // Output: 6
-  
-  const foundLetters = scanForLetters(word, lettersToScan);
-  console.log("Found letters:", foundLetters); // Output: ["a", "s", "k"]
-  
-  const blankedWord = createBlankedWord(word);
-  console.log("Blanked word:", blankedWord); // Output: "______"
+}
+
+// RETURN LETTERS COUNTED_____________________________________________
+const letterCount = countLetters(currentWord);
+console.log("Number of letters:", letterCount);
+
+// BLANK WORD_________________________________________________________
+let wordDisplay = document.getElementById('wordDisplay');
+function createBlankedWord(currentWord) {
+    return "_ ".repeat(currentWord.length);
+}
+const blankedWord = createBlankedWord(currentWord);
+console.log("Blanked word:", blankedWord);
+wordDisplay.textContent = blankedWord;
+
+// SELECT LETTER_____________________________________________________
+const letterBtn = document.getElementsByClassName('letter');
+const selectBtn = document.getElementById('selectBtn');
+const keyboard = Array.from(letterBtn);
+
+keyboard.forEach(letterBtn => {
+    let letterSelected = "";
+    letterBtn.addEventListener('click', (e) => {
+        letterSelected = e.target.innerHTML.slice(0, 1);
+        console.log("Letter selected:", letterSelected);
+    });
+});
 
 
-// let string = "";
 
-// arr.forEach(button => {
-//     button.addEventListener('click', (e) =>{
-//         if(e.target.innerHTML == '='){
-//             string = eval(string);
-//             input.value = string;
-//         }
 
-//         else if(e.target.innerHTML == 'AC'){
-//             string = "";
-//             input.value = string;
-//         }
-//         else if(e.target.innerHTML == 'DEL'){
-//             string = string.substring(0, string.Length-1);
-//             input.value = string;
-//         }
-//         else{
-//             string += e.target.innerHTML;
-//             input.value = string;
-//         }
-//     })
-// })
+// SCAN FOR LETTER___________________________________________________
+const letterToScan = "R";
+const foundLetter = scanForLetters(currentWord, letterToScan);
+console.log("Found letter:", foundLetter);
+
+
+
+
+
+
+
+
 
 
 // MUSIC STUFF
