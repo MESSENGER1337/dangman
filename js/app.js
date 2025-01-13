@@ -86,9 +86,6 @@ const categories = {
     ]
 };
 
-
-
-
 // RANDOM CATEGORY_____________________________________________________
 let hintText = document.getElementById('hintText');
 const randomCategoryKey = Object.keys(categories)[Math.floor(Math.random() * Object.keys(categories).length)];
@@ -105,10 +102,12 @@ function scanForLetters(currentWord, lettersToScan) {
     let foundLetters = [];
     for (const letter of currentWord) {
         if (lettersToScan.includes(letter)) {
-            foundLetters.push(letter);
+            foundLetters.push(letter);   
         }
+
     }
     return foundLetters;
+    
 }
 
 // SELECT LETTER_____________________________________________________
@@ -139,7 +138,6 @@ function createBlankedWord(currentWord) {
     }).join("");
 }
 
-
 function updateWordDisplay() {
     const blankedWord = createBlankedWord(currentWord);
     wordDisplay.textContent = blankedWord;
@@ -163,19 +161,48 @@ newGameBtn.addEventListener('click', () => {
     location.reload();
 })
 
-
-
 updateWordDisplay();
+
+
+// LOSE______________________________________________________________
+const dangmanImages = [
+    'assets/artwork/1/dangman-01-01.png', 
+    'assets/artwork/1/dangman-01-02.png', 
+    'assets/artwork/1/dangman-01-03.png', 
+    'assets/artwork/1/dangman-01-04.png', 
+    'assets/artwork/1/dangman-01-05.png', 
+    'assets/artwork/1/dangman-01-06.png', 
+    'assets/artwork/1/dangman-01-07.png', 
+    'assets/artwork/1/dangman-01-08.png'
+];
+
+let currentStage = 0;
+
+function updateDangmanImage() {
+    const currentImage = document.getElementById('dangmanPic');
+    currentImage.src = dangmanImages[currentStage];
+}
+
+function gameOver() {
+    console.log("Game Over! You've lost.");
+    // You can expand this to show a game over screen or restart option
+}
 
 
 // SCAN FOR LETTER___________________________________________________
 const selectBtn = document.getElementById('selectBtn');
-selectBtn.addEventListener('click', (e) => {
+selectBtn.addEventListener('click', () => {
     const letterToSearch = letterSelected;
     const foundLetter = scanForLetters(currentWord, letterToSearch);
-    if (foundLetter) {
+
+    if (foundLetter.length > 0) {
+        // If the letter is found, add it to guessed letters
         guessedLetters.add(letterToSearch);
+    } else {
+        // If the letter is not found, increment the stage
+        currentStage++;
     }
+
     console.log("Letter Searched:", letterToSearch);
     console.log("Letter Found:", foundLetter.toString());
 
@@ -183,14 +210,38 @@ selectBtn.addEventListener('click', (e) => {
 
     if (wordDisplay.textContent === currentWord) {
         gameWin();
-    }
+    } else {
+        updateDangmanImage();
 
+        if (currentStage === dangmanImages.length-1) {
+            gameOver();
+        }
+    }
 });
 
 
-// LOSE
-// if wrong then next pic
-// if man pic = last pic
+
+
+
+
+
+
+
+
+
+
+
+// add timed mode????
+
+
+
+
+
+
+
+
+
+
 
 // KEY CHANGE
 // one at a time - if any letter is clicked then unclick, then click new
