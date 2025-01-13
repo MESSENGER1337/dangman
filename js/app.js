@@ -1,87 +1,87 @@
 const categories = {
     colors: [
-        "PURPLE", "ORANGE", "MAROON", "SILVER", 
-        "RED", "BLUE", "GREEN", "YELLOW", 
-        "PINK", "BLACK", "WHITE", "GOLD", 
-        "CYAN", "MAGENTA", "BROWN", "BEIGE", 
+        "PURPLE", "ORANGE", "MAROON", "SILVER",
+        "RED", "BLUE", "GREEN", "YELLOW",
+        "PINK", "BLACK", "WHITE", "GOLD",
+        "CYAN", "MAGENTA", "BROWN", "BEIGE",
         "AQUA", "LAVENDER", "NAVY", "TEAL"
     ],
     countries: [
-        "FRANCE", "JAPAN", "BRAZIL", "CANADA", 
-        "GERMANY", "INDIA", "EGYPT", "AUSTRALIA", 
-        "CHINA", "SPAIN", "ITALY", "MEXICO", 
+        "FRANCE", "JAPAN", "BRAZIL", "CANADA",
+        "GERMANY", "INDIA", "EGYPT", "AUSTRALIA",
+        "CHINA", "SPAIN", "ITALY", "MEXICO",
         "RUSSIA", "SOUTH AFRICA", "ARGENTINA", "NORWAY"
     ],
     planets: [
-        "MARS", "VENUS", "JUPITER", "SATURN", 
-        "MERCURY", "URANUS", "NEPTUNE", "PLUTO", 
+        "MARS", "VENUS", "JUPITER", "SATURN",
+        "MERCURY", "URANUS", "NEPTUNE", "PLUTO",
         "EARTH"
     ],
     cities: [
-        "PARIS", "TOKYO", "LONDON", "TORONTO", 
-        "NEW YORK", "LOS ANGELES", "DUBAI", "ROME", 
-        "BERLIN", "SYDNEY", "CAIRO", "MOSCOW", 
+        "PARIS", "TOKYO", "LONDON", "TORONTO",
+        "NEW YORK", "LOS ANGELES", "DUBAI", "ROME",
+        "BERLIN", "SYDNEY", "CAIRO", "MOSCOW",
         "BEIJING", "RIO DE JANEIRO", "SEOUL", "MUMBAI"
     ],
     fruits: [
-        "APPLE", "BANANA", "ORANGE", "GRAPE", 
-        "MANGO", "PEACH", "KIWI", "PINEAPPLE", 
-        "STRAWBERRY", "WATERMELON", "BLUEBERRY", "CHERRY", 
+        "APPLE", "BANANA", "ORANGE", "GRAPE",
+        "MANGO", "PEACH", "KIWI", "PINEAPPLE",
+        "STRAWBERRY", "WATERMELON", "BLUEBERRY", "CHERRY",
         "PAPAYA", "PLUM", "LEMON", "LIME"
     ],
     animals: [
-        "DOG", "CAT", "ELEPHANT", "LION", 
-        "TIGER", "PENGUIN", "SNAKE", "ZEBRA", 
-        "GIRAFFE", "RHINO", "KANGAROO", "BEAR", 
+        "DOG", "CAT", "ELEPHANT", "LION",
+        "TIGER", "PENGUIN", "SNAKE", "ZEBRA",
+        "GIRAFFE", "RHINO", "KANGAROO", "BEAR",
         "MONKEY", "DOLPHIN", "CROCODILE", "WOLF"
     ],
     shapes: [
-        "CIRCLE", "SQUARE", "TRIANGLE", "HEXAGON", 
+        "CIRCLE", "SQUARE", "TRIANGLE", "HEXAGON",
         "RECTANGLE", "PENTAGON", "OCTAGON", "RHOMBUS"
     ],
     vehicles: [
-        "CAR", "BOAT", "PLANE", "MOTORCYCLE", 
-        "BICYCLE", "BUS", "TRUCK", "HELICOPTER", 
+        "CAR", "BOAT", "PLANE", "MOTORCYCLE",
+        "BICYCLE", "BUS", "TRUCK", "HELICOPTER",
         "TRAIN", "SUBMARINE", "SCOOTER", "TANK"
     ],
     instruments: [
-        "GUITAR", "PIANO", "DRUM", "VIOLIN", 
-        "TRUMPET", "FLUTE", "SAXOPHONE", "HARP", 
+        "GUITAR", "PIANO", "DRUM", "VIOLIN",
+        "TRUMPET", "FLUTE", "SAXOPHONE", "HARP",
         "CELLO", "TROMBONE", "CLARINET", "BONGO"
     ],
     professions: [
-        "DOCTOR", "TEACHER", "CHEF", "PILOT", 
-        "ENGINEER", "LAWYER", "ARTIST", "NURSE", 
+        "DOCTOR", "TEACHER", "CHEF", "PILOT",
+        "ENGINEER", "LAWYER", "ARTIST", "NURSE",
         "SCIENTIST", "WRITER", "POLICE OFFICER", "FIRE FIGHTER"
     ],
     sports: [
-        "SOCCER", "TENNIS", "BASEBALL", "CRICKET", 
-        "BASKETBALL", "GOLF", "HOCKEY", "RUGBY", 
-        "SWIMMING", "BOXING", "CYCLING", "SKIING", 
+        "SOCCER", "TENNIS", "BASEBALL", "CRICKET",
+        "BASKETBALL", "GOLF", "HOCKEY", "RUGBY",
+        "SWIMMING", "BOXING", "CYCLING", "SKIING",
         "SURFING", "SKATEBOARDING", "ARCHERY", "WRESTLING"
     ],
     flowers: [
-        "ROSE", "TULIP", "LILY", "ORCHID", 
-        "DAISY", "SUNFLOWER", "JASMINE", "LOTUS", 
+        "ROSE", "TULIP", "LILY", "ORCHID",
+        "DAISY", "SUNFLOWER", "JASMINE", "LOTUS",
         "HIBISCUS", "LAVENDER", "VIOLET", "DAFFODIL"
     ],
     mythical: [
-        "DRAGON", "UNICORN", "PHOENIX", "CENTAUR", 
-        "MERMAID", "GRIFFIN", "MINOTAUR", "PEGASUS", 
+        "DRAGON", "UNICORN", "PHOENIX", "CENTAUR",
+        "MERMAID", "GRIFFIN", "MINOTAUR", "PEGASUS",
         "CHIMERA", "HYDRA", "FAIRY", "GNOME"
     ],
     emotions: [
-        "HAPPY", "SAD", "ANGRY", "EXCITED", 
-        "SCARED", "CONFUSED", "BORED", "SURPRISED", 
+        "HAPPY", "SAD", "ANGRY", "EXCITED",
+        "SCARED", "CONFUSED", "BORED", "SURPRISED",
         "PROUD", "JEALOUS", "RELIEVED", "NERVOUS"
     ],
     elements: [
-        "FIRE", "WATER", "EARTH", "AIR", 
+        "FIRE", "WATER", "EARTH", "AIR",
         "LIGHTNING", "ICE", "METAL", "WOOD"
     ],
     beverages: [
-        "COFFEE", "TEA", "JUICE", "SODA", 
-        "WATER", "MILK", "WINE", "BEER", 
+        "COFFEE", "TEA", "JUICE", "SODA",
+        "WATER", "MILK", "WINE", "BEER",
         "LEMONADE", "MOCKTAIL", "SMOOTHIE", "HOT CHOCOLATE"
     ]
 };
@@ -102,12 +102,12 @@ function scanForLetters(currentWord, lettersToScan) {
     let foundLetters = [];
     for (const letter of currentWord) {
         if (lettersToScan.includes(letter)) {
-            foundLetters.push(letter);   
+            foundLetters.push(letter);
         }
 
     }
     return foundLetters;
-    
+
 }
 
 // SELECT LETTER_____________________________________________________
@@ -116,10 +116,17 @@ const keyboard = Array.from(letterBtn);
 let letterSelected = "";
 keyboard.forEach(letterBtn => {
     letterBtn.addEventListener('click', (e) => {
-        // letterBtn.classList.toggle('clicked');
+        // Remove 'clicked' class from all buttons
+        keyboard.forEach(btn => btn.classList.remove('clicked'));
+
+        // Add 'clicked' class to the clicked button
+        letterBtn.classList.add('clicked');
+
+        // Get the letter from the button
         letterSelected = e.target.innerHTML.slice(0, 1);
     });
 });
+
 
 // BLANK WORD_________________________________________________________
 let wordDisplay = document.getElementById('wordDisplay');
@@ -166,13 +173,13 @@ updateWordDisplay();
 
 // LOSE______________________________________________________________
 const dangmanImages = [
-    'assets/artwork/1/dangman-01-01.png', 
-    'assets/artwork/1/dangman-01-02.png', 
-    'assets/artwork/1/dangman-01-03.png', 
-    'assets/artwork/1/dangman-01-04.png', 
-    'assets/artwork/1/dangman-01-05.png', 
-    'assets/artwork/1/dangman-01-06.png', 
-    'assets/artwork/1/dangman-01-07.png', 
+    'assets/artwork/1/dangman-01-01.png',
+    'assets/artwork/1/dangman-01-02.png',
+    'assets/artwork/1/dangman-01-03.png',
+    'assets/artwork/1/dangman-01-04.png',
+    'assets/artwork/1/dangman-01-05.png',
+    'assets/artwork/1/dangman-01-06.png',
+    'assets/artwork/1/dangman-01-07.png',
     'assets/artwork/1/dangman-01-08.png'
 ];
 
@@ -186,6 +193,10 @@ function updateDangmanImage() {
 function gameOver() {
     console.log("Game Over!");
     hintText.textContent = "GAME OVER";
+
+    guessedLetters = new Set([...currentWord]);  // Add all letters of the word to guessedLetters
+    updateWordDisplay(); // Update the word display to show the entire word
+
     selectBtn.classList.add('hidden');  // Hide SELECT button
     newGameBtn.classList.remove('hidden');  // Show NEW GAME button
 }
@@ -194,6 +205,14 @@ function gameOver() {
 // SCAN FOR LETTER___________________________________________________
 const selectBtn = document.getElementById('selectBtn');
 selectBtn.addEventListener('click', () => {
+    // Get the clicked letter button from the previously selected letter
+    const clickedLetterBtn = keyboard.find(btn => btn.innerHTML === letterSelected);
+
+    // If the button is marked as 'used', do not proceed
+    if (clickedLetterBtn.classList.contains('used')) {
+        return; // Skip the rest of the function if the button is 'used'
+    }
+
     const letterToSearch = letterSelected;
     const foundLetter = scanForLetters(currentWord, letterToSearch);
 
@@ -215,11 +234,21 @@ selectBtn.addEventListener('click', () => {
     } else {
         updateDangmanImage();
 
-        if (currentStage === dangmanImages.length-1) {
+        if (currentStage === dangmanImages.length - 1) {
             gameOver();
         }
     }
+
+    // Add the 'used' class to mark the button as clicked
+    if (clickedLetterBtn) {
+        clickedLetterBtn.classList.add('used');
+    }
 });
+
+
+
+
+
 
 
 
