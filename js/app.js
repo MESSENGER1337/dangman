@@ -1,3 +1,42 @@
+const dangmanSets = [
+    [
+        'assets/artwork/set-01/dangman-01-01.png',
+        'assets/artwork/set-01/dangman-01-02.png',
+        'assets/artwork/set-01/dangman-01-03.png',
+        'assets/artwork/set-01/dangman-01-04.png',
+        'assets/artwork/set-01/dangman-01-05.png',
+        'assets/artwork/set-01/dangman-01-06.png',
+        'assets/artwork/set-01/dangman-01-07.png',
+        'assets/artwork/set-01/dangman-01-08.png'
+    ],
+    [
+        'assets/artwork/set-02/dangman-02-01.png',
+        'assets/artwork/set-02/dangman-02-02.png',
+        'assets/artwork/set-02/dangman-02-03.png',
+        'assets/artwork/set-02/dangman-02-04.png',
+        'assets/artwork/set-02/dangman-02-05.png',
+        'assets/artwork/set-02/dangman-02-06.png',
+        'assets/artwork/set-02/dangman-02-07.png',
+        'assets/artwork/set-02/dangman-02-08.png'
+    ]
+];
+
+let dangmanImages = [];
+
+function selectRandomDangmanSet() {
+    const randomIndex = Math.floor(Math.random() * dangmanSets.length);
+    dangmanImages = dangmanSets[randomIndex];
+
+    // Dynamically set the initial image
+    const currentImage = document.getElementById('dangmanPic');
+    currentImage.src = dangmanImages[0];
+}
+
+
+selectRandomDangmanSet(); // Call this when the game starts
+
+
+
 const categories = {
     colors: [
         "PURPLE", "ORANGE", "MAROON", "SILVER",
@@ -74,10 +113,6 @@ const categories = {
         "HAPPY", "SAD", "ANGRY", "EXCITED",
         "SCARED", "CONFUSED", "BORED", "SURPRISED",
         "PROUD", "JEALOUS", "RELIEVED", "NERVOUS"
-    ],
-    elements: [
-        "FIRE", "WATER", "EARTH", "AIR",
-        "LIGHTNING", "ICE", "METAL", "WOOD"
     ],
     beverages: [
         "COFFEE", "TEA", "JUICE", "SODA",
@@ -172,16 +207,7 @@ updateWordDisplay();
 
 
 // LOSE______________________________________________________________
-const dangmanImages = [
-    'assets/artwork/1/dangman-01-01.png',
-    'assets/artwork/1/dangman-01-02.png',
-    'assets/artwork/1/dangman-01-03.png',
-    'assets/artwork/1/dangman-01-04.png',
-    'assets/artwork/1/dangman-01-05.png',
-    'assets/artwork/1/dangman-01-06.png',
-    'assets/artwork/1/dangman-01-07.png',
-    'assets/artwork/1/dangman-01-08.png'
-];
+
 
 let currentStage = 0;
 

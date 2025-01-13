@@ -11,7 +11,7 @@ body {
 }
 
 img {
-    width: 300px;
+    width: 350px;
 }
 
 .letterRow {
@@ -72,4 +72,11 @@ img {
 
 #wordDisplay {
     letter-spacing: 10px;
+}
+
+#signature{
+    display: flex;
+    margin-top: 60px;
+    font-size: 8px;
+    color: rgb(66, 66, 66);
 }
