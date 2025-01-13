@@ -1,11 +1,93 @@
 const categories = {
-    colors: ["PURPLE", "ORANGE", "MAROON", "SILVER"],
-    countries: ["FRANCE", "JAPAN", "BRAZIL", "CANADA"],
-    planets: ["MARS", "VENUS", "JUPITER", "SATURN"],
-    cities: ["PARIS", "TOKYO", "LONDON", "TORONTO"],
-    fruits: ["APPLE", "BANANA", "ORANGE", "GRAPE"],
-    animals: ["DOG", "CAT", "ELEPHANT", "LION"]
+    colors: [
+        "PURPLE", "ORANGE", "MAROON", "SILVER", 
+        "RED", "BLUE", "GREEN", "YELLOW", 
+        "PINK", "BLACK", "WHITE", "GOLD", 
+        "CYAN", "MAGENTA", "BROWN", "BEIGE", 
+        "AQUA", "LAVENDER", "NAVY", "TEAL"
+    ],
+    countries: [
+        "FRANCE", "JAPAN", "BRAZIL", "CANADA", 
+        "GERMANY", "INDIA", "EGYPT", "AUSTRALIA", 
+        "CHINA", "SPAIN", "ITALY", "MEXICO", 
+        "RUSSIA", "SOUTH AFRICA", "ARGENTINA", "NORWAY"
+    ],
+    planets: [
+        "MARS", "VENUS", "JUPITER", "SATURN", 
+        "MERCURY", "URANUS", "NEPTUNE", "PLUTO", 
+        "EARTH"
+    ],
+    cities: [
+        "PARIS", "TOKYO", "LONDON", "TORONTO", 
+        "NEW YORK", "LOS ANGELES", "DUBAI", "ROME", 
+        "BERLIN", "SYDNEY", "CAIRO", "MOSCOW", 
+        "BEIJING", "RIO DE JANEIRO", "SEOUL", "MUMBAI"
+    ],
+    fruits: [
+        "APPLE", "BANANA", "ORANGE", "GRAPE", 
+        "MANGO", "PEACH", "KIWI", "PINEAPPLE", 
+        "STRAWBERRY", "WATERMELON", "BLUEBERRY", "CHERRY", 
+        "PAPAYA", "PLUM", "LEMON", "LIME"
+    ],
+    animals: [
+        "DOG", "CAT", "ELEPHANT", "LION", 
+        "TIGER", "PENGUIN", "SNAKE", "ZEBRA", 
+        "GIRAFFE", "RHINO", "KANGAROO", "BEAR", 
+        "MONKEY", "DOLPHIN", "CROCODILE", "WOLF"
+    ],
+    shapes: [
+        "CIRCLE", "SQUARE", "TRIANGLE", "HEXAGON", 
+        "RECTANGLE", "PENTAGON", "OCTAGON", "RHOMBUS"
+    ],
+    vehicles: [
+        "CAR", "BOAT", "PLANE", "MOTORCYCLE", 
+        "BICYCLE", "BUS", "TRUCK", "HELICOPTER", 
+        "TRAIN", "SUBMARINE", "SCOOTER", "TANK"
+    ],
+    instruments: [
+        "GUITAR", "PIANO", "DRUM", "VIOLIN", 
+        "TRUMPET", "FLUTE", "SAXOPHONE", "HARP", 
+        "CELLO", "TROMBONE", "CLARINET", "BONGO"
+    ],
+    professions: [
+        "DOCTOR", "TEACHER", "CHEF", "PILOT", 
+        "ENGINEER", "LAWYER", "ARTIST", "NURSE", 
+        "SCIENTIST", "WRITER", "POLICE OFFICER", "FIRE FIGHTER"
+    ],
+    sports: [
+        "SOCCER", "TENNIS", "BASEBALL", "CRICKET", 
+        "BASKETBALL", "GOLF", "HOCKEY", "RUGBY", 
+        "SWIMMING", "BOXING", "CYCLING", "SKIING", 
+        "SURFING", "SKATEBOARDING", "ARCHERY", "WRESTLING"
+    ],
+    flowers: [
+        "ROSE", "TULIP", "LILY", "ORCHID", 
+        "DAISY", "SUNFLOWER", "JASMINE", "LOTUS", 
+        "HIBISCUS", "LAVENDER", "VIOLET", "DAFFODIL"
+    ],
+    mythicalCreatures: [
+        "DRAGON", "UNICORN", "PHOENIX", "CENTAUR", 
+        "MERMAID", "GRIFFIN", "MINOTAUR", "PEGASUS", 
+        "CHIMERA", "HYDRA", "FAIRY", "GNOME"
+    ],
+    emotions: [
+        "HAPPY", "SAD", "ANGRY", "EXCITED", 
+        "SCARED", "CONFUSED", "BORED", "SURPRISED", 
+        "PROUD", "JEALOUS", "RELIEVED", "NERVOUS"
+    ],
+    elements: [
+        "FIRE", "WATER", "EARTH", "AIR", 
+        "LIGHTNING", "ICE", "METAL", "WOOD"
+    ],
+    beverages: [
+        "COFFEE", "TEA", "JUICE", "SODA", 
+        "WATER", "MILK", "WINE", "BEER", 
+        "LEMONADE", "MOCKTAIL", "SMOOTHIE", "HOT CHOCOLATE"
+    ]
 };
+
+
+
 
 // RANDOM CATEGORY_____________________________________________________
 let hintText = document.getElementById('hintText');
@@ -47,14 +129,16 @@ let guessedLetters = new Set();
 
 function createBlankedWord(currentWord) {
     return currentWord.split("").map((letter) => {
-        if (guessedLetters.has(letter)) {
+        if (letter === " ") {
+            return " "; // Return space if the character is a space
+        } else if (guessedLetters.has(letter)) {
             return letter;
         } else {
             return "_";
         }
     }).join("");
-
 }
+
 
 function updateWordDisplay() {
     const blankedWord = createBlankedWord(currentWord);
@@ -65,11 +149,11 @@ function updateWordDisplay() {
 
 // WIN GAME__________________________________________________________
 const newGameBtn = document.getElementById('newGameBtn');
-function gameWin(){
+function gameWin() {
     console.log("YOU WIN!");
     updateWordDisplay();
-    hintText.textContent="YOU WIN!!!";
-    
+    hintText.textContent = "YOU WIN!!!";
+
     selectBtn.classList.add('hidden');  // Hide SELECT button
     newGameBtn.classList.remove('hidden');  // Show NEW GAME button
 }
@@ -97,22 +181,11 @@ selectBtn.addEventListener('click', (e) => {
 
     updateWordDisplay();
 
-    if (wordDisplay.textContent === currentWord){
+    if (wordDisplay.textContent === currentWord) {
         gameWin();
     }
 
 });
-
-
-
-
-
-// WIN          
-// if wordDisplay.textContent === currentWord or something
-
-
-
-
 
 
 // LOSE
