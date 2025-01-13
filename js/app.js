@@ -65,7 +65,7 @@ const categories = {
         "DAISY", "SUNFLOWER", "JASMINE", "LOTUS", 
         "HIBISCUS", "LAVENDER", "VIOLET", "DAFFODIL"
     ],
-    mythicalCreatures: [
+    mythical: [
         "DRAGON", "UNICORN", "PHOENIX", "CENTAUR", 
         "MERMAID", "GRIFFIN", "MINOTAUR", "PEGASUS", 
         "CHIMERA", "HYDRA", "FAIRY", "GNOME"
@@ -184,8 +184,10 @@ function updateDangmanImage() {
 }
 
 function gameOver() {
-    console.log("Game Over! You've lost.");
-    // You can expand this to show a game over screen or restart option
+    console.log("Game Over!");
+    hintText.textContent = "GAME OVER";
+    selectBtn.classList.add('hidden');  // Hide SELECT button
+    newGameBtn.classList.remove('hidden');  // Show NEW GAME button
 }
 
 
