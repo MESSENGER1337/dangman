@@ -117,7 +117,7 @@ const categories = {
     mythical: [
         "DRAGON", "UNICORN", "PHOENIX", "CENTAUR",
         "MERMAID", "GRIFFIN", "MINOTAUR", "PEGASUS",
-        "CHIMERA", "HYDRA", "FAIRY", "GNOME"
+        "FAIRY", "GNOME"
     ],
     emotions: [
         "HAPPY", "SAD", "ANGRY", "EXCITED",
@@ -127,7 +127,7 @@ const categories = {
     beverages: [
         "COFFEE", "TEA", "JUICE", "SODA",
         "WATER", "MILK", "WINE", "BEER",
-        "LEMONADE", "MOCKTAIL", "SMOOTHIE", "HOT CHOCOLATE"
+        "LEMONADE", "SMOOTHIE", "HOT CHOCOLATE"
     ]
 };
 
@@ -152,7 +152,6 @@ function scanForLetters(currentWord, lettersToScan) {
 
     }
     return foundLetters;
-
 }
 
 // SELECT LETTER_____________________________________________________
@@ -171,7 +170,6 @@ keyboard.forEach(letterBtn => {
         letterSelected = e.target.innerHTML.slice(0, 1);
     });
 });
-
 
 // BLANK WORD_________________________________________________________
 let wordDisplay = document.getElementById('wordDisplay');
@@ -204,8 +202,8 @@ function gameWin() {
     updateWordDisplay();
     hintText.textContent = "YOU WIN!!!";
 
-    selectBtn.classList.add('hidden');  // Hide SELECT button
-    newGameBtn.classList.remove('hidden');  // Show NEW GAME button
+    selectBtn.classList.add('hidden');
+    newGameBtn.classList.remove('hidden');
 }
 
 // NEW GAME_____________________________________________________________
@@ -215,10 +213,7 @@ newGameBtn.addEventListener('click', () => {
 
 updateWordDisplay();
 
-
 // LOSE______________________________________________________________
-
-
 let currentStage = 0;
 
 function updateDangmanImage() {
@@ -233,10 +228,9 @@ function gameOver() {
     guessedLetters = new Set([...currentWord]);  // Add all letters of the word to guessedLetters
     updateWordDisplay(); // Update the word display to show the entire word
 
-    selectBtn.classList.add('hidden');  // Hide SELECT button
-    newGameBtn.classList.remove('hidden');  // Show NEW GAME button
+    selectBtn.classList.add('hidden');
+    newGameBtn.classList.remove('hidden');
 }
-
 
 // SCAN FOR LETTER___________________________________________________
 const selectBtn = document.getElementById('selectBtn');
@@ -275,44 +269,9 @@ selectBtn.addEventListener('click', () => {
         }
     }
 
-    // Add the 'used' class to mark the button as clicked
     if (clickedLetterBtn) {
         clickedLetterBtn.classList.add('used');
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // add timed mode????
-
-
-
-
-
-
-
-
-
-
-
-// KEY CHANGE
-// one at a time - if any letter is clicked then unclick, then click new
-// select refresh - if letterClicked === foundLetter change to clicpPermenant
-
-// NEW MAN
-// on load, refresh, win and lose - return a new man
