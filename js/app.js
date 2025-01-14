@@ -28,6 +28,16 @@ const dangmanSets = [
         'assets/artwork/set-03/dangman-03-06.png',
         'assets/artwork/set-03/dangman-03-07.png',
         'assets/artwork/set-03/dangman-03-08.png'
+    ],
+    [
+        'assets/artwork/set-04/dangman-04-01.png',
+        'assets/artwork/set-04/dangman-04-02.png',
+        'assets/artwork/set-04/dangman-04-03.png',
+        'assets/artwork/set-04/dangman-04-04.png',
+        'assets/artwork/set-04/dangman-04-05.png',
+        'assets/artwork/set-04/dangman-04-06.png',
+        'assets/artwork/set-04/dangman-04-07.png',
+        'assets/artwork/set-04/dangman-04-08.png'
     ]
 ];
 
