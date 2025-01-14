@@ -137,27 +137,58 @@ const categories = {
 
 let dangmanImages = [];
 
+
+
+
+
+
+
+
+// function selectRandomDangmanSet() {
+//     const randomIndex = Math.floor(Math.random() * dangmanSets.length);
+//     dangmanImages = dangmanSets[randomIndex];
+
+//     // Dynamically set the initial image
+//     const currentImage = document.getElementById('dangmanPic');
+//     currentImage.src = dangmanImages[0];
+// }
+let shuffledSets = [];
+let currentSetIndex = 0;
+
+function shuffleSets() {
+    shuffledSets = dangmanSets.slice().sort(() => Math.random() - 0.5);
+    currentSetIndex = 0;
+}
+
 function selectRandomDangmanSet() {
-    const randomIndex = Math.floor(Math.random() * dangmanSets.length);
-    dangmanImages = dangmanSets[randomIndex];
+    if (shuffledSets.length === 0 || currentSetIndex >= shuffledSets.length) {
+        shuffleSets();
+    }
+    dangmanImages = shuffledSets[currentSetIndex];
+    currentSetIndex++;
 
     // Dynamically set the initial image
     const currentImage = document.getElementById('dangmanPic');
     currentImage.src = dangmanImages[0];
 }
 
+
+
+
+
 // Call this when the game starts
-selectRandomDangmanSet(); 
+shuffleSets();
+selectRandomDangmanSet();
 
 // RANDOM CATEGORY_____________________________________________________
 let hintText = document.getElementById('hintText');
-const randomCategoryKey = Object.keys(categories)[Math.floor(Math.random() * Object.keys(categories).length)];
-const currentCategory = categories[randomCategoryKey];
+let randomCategoryKey = Object.keys(categories)[Math.floor(Math.random() * Object.keys(categories).length)];
+let currentCategory = categories[randomCategoryKey];
 console.log("Random Category:", randomCategoryKey);
 hintText.textContent = randomCategoryKey;
 
 // RANDOM WORD_________________________________________________________
-const currentWord = currentCategory[Math.floor(Math.random() * currentCategory.length)];
+let currentWord = currentCategory[Math.floor(Math.random() * currentCategory.length)];
 console.log("Random Word:", currentWord);
 
 // GET LETTERS_______________________________________________________
@@ -198,7 +229,7 @@ function createBlankedWord(currentWord) {
     return currentWord.split("").map((letter) => {
         if (letter === " ") {
             // Return space if the character is a space
-            return " "; 
+            return " ";
         } else if (guessedLetters.has(letter)) {
             return letter;
         } else {
@@ -208,7 +239,7 @@ function createBlankedWord(currentWord) {
 }
 
 function updateWordDisplay() {
-    const blankedWord = createBlankedWord(currentWord);
+    let blankedWord = createBlankedWord(currentWord);
     wordDisplay.textContent = blankedWord;
     console.log("Word:", currentWord);
     console.log("Guess:", wordDisplay.textContent);
@@ -216,6 +247,7 @@ function updateWordDisplay() {
 
 // WIN GAME__________________________________________________________
 const newGameBtn = document.getElementById('newGameBtn');
+
 function gameWin() {
     console.log("YOU WIN!");
     updateWordDisplay();
@@ -227,7 +259,29 @@ function gameWin() {
 
 // NEW GAME_____________________________________________________________
 newGameBtn.addEventListener('click', () => {
-    location.reload();
+
+    // WORKS!! NOW RANDOMIZE PROPERLY!!!
+    selectRandomDangmanSet();
+
+    let randomCategoryKey = Object.keys(categories)[Math.floor(Math.random() * Object.keys(categories).length)];
+    let currentCategory = categories[randomCategoryKey];
+    console.log("Random Category:", randomCategoryKey);
+    hintText.textContent = randomCategoryKey;
+
+    guessedLetters = new Set();
+    currentWord = currentCategory[Math.floor(Math.random() * currentCategory.length)];
+    console.log("Random Word:", currentWord);
+
+    scanForLetters
+    createBlankedWord
+
+    updateWordDisplay();
+
+    newGameBtn.classList.add('hidden');
+    selectBtn.classList.remove('hidden');
+
+    keyboard.forEach(btn => btn.classList.remove('used', 'clicked'));
+
 })
 
 updateWordDisplay();
@@ -247,7 +301,7 @@ function gameOver() {
     // Add all letters of the word to guessedLetters
     guessedLetters = new Set([...currentWord]);
     // Update the word display to show the entire word
-    updateWordDisplay(); 
+    updateWordDisplay();
 
     selectBtn.classList.add('hidden');
     newGameBtn.classList.remove('hidden');
@@ -262,7 +316,7 @@ selectBtn.addEventListener('click', () => {
     // If the button is marked as 'used', do not proceed
     if (clickedLetterBtn.classList.contains('used')) {
         // Skip the rest of the function if the button is 'used'
-        return; 
+        return;
     }
 
     const letterToSearch = letterSelected;
