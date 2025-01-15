@@ -137,47 +137,16 @@ const categories = {
 
 let dangmanImages = [];
 
-
-
-
-
-
-
-
-// function selectRandomDangmanSet() {
-//     const randomIndex = Math.floor(Math.random() * dangmanSets.length);
-//     dangmanImages = dangmanSets[randomIndex];
-
-//     // Dynamically set the initial image
-//     const currentImage = document.getElementById('dangmanPic');
-//     currentImage.src = dangmanImages[0];
-// }
-let shuffledSets = [];
-let currentSetIndex = 0;
-
-function shuffleSets() {
-    shuffledSets = dangmanSets.slice().sort(() => Math.random() - 0.5);
-    currentSetIndex = 0;
-}
-
 function selectRandomDangmanSet() {
-    if (shuffledSets.length === 0 || currentSetIndex >= shuffledSets.length) {
-        shuffleSets();
-    }
-    dangmanImages = shuffledSets[currentSetIndex];
-    currentSetIndex++;
+    const randomIndex = Math.floor(Math.random() * dangmanSets.length);
+    dangmanImages = dangmanSets[randomIndex];
 
     // Dynamically set the initial image
     const currentImage = document.getElementById('dangmanPic');
     currentImage.src = dangmanImages[0];
 }
 
-
-
-
-
 // Call this when the game starts
-shuffleSets();
 selectRandomDangmanSet();
 
 // RANDOM CATEGORY_____________________________________________________
@@ -260,33 +229,36 @@ function gameWin() {
 // NEW GAME_____________________________________________________________
 newGameBtn.addEventListener('click', () => {
 
-    // WORKS!! NOW RANDOMIZE PROPERLY!!!
+    guessedLetters = new Set();
+    
+    currentStage = 0;
     selectRandomDangmanSet();
 
     let randomCategoryKey = Object.keys(categories)[Math.floor(Math.random() * Object.keys(categories).length)];
     let currentCategory = categories[randomCategoryKey];
     console.log("Random Category:", randomCategoryKey);
     hintText.textContent = randomCategoryKey;
+    
+   
 
-    guessedLetters = new Set();
+
     currentWord = currentCategory[Math.floor(Math.random() * currentCategory.length)];
     console.log("Random Word:", currentWord);
-
-    scanForLetters
-    createBlankedWord
-
-    updateWordDisplay();
 
     newGameBtn.classList.add('hidden');
     selectBtn.classList.remove('hidden');
 
-    keyboard.forEach(btn => btn.classList.remove('used', 'clicked'));
+    keyboard.forEach(btn => btn.classList.remove('clicked', 'used'));
+    scanForLetters
+    createBlankedWord
+    updateWordDisplay();
 
 })
 
 updateWordDisplay();
 
 // LOSE______________________________________________________________
+
 let currentStage = 0;
 
 function updateDangmanImage() {
