@@ -239,6 +239,9 @@ function updateWordDisplay() {
 const newGameBtn = document.getElementById('newGameBtn');
 
 function gameWin() {
+
+    currentStage = 0;
+    updateDangmanImage();
     console.log("YOU WIN!");
     updateWordDisplay();
     hintText.textContent = "YOU WIN!!!";
