@@ -147,12 +147,12 @@ const categories = {
         "BLACK PANTHER", "FLASH", "AQUAMAN", "GREEN LANTERN",
         "WOLVERINE"
     ],
-    super_villains: [
+    villains: [
         "JOKER", "LEX LUTHOR", "THANOS", "LOKI",
         "GREEN GOBLIN", "VENOM", "MAGNETO", "DOCTOR DOOM",
         "CATWOMAN", "HARLEY QUINN", "ULTRON", "RED SKULL"
     ],
-    movie_heroes: [
+    heroes: [
         "INDIANA JONES", "JAMES BOND", "JOHN WICK", "SARAH CONNOR",
         "RIPLEY", "RAMBO", "MAD MAX", "JASON BOURNE", "ROBOCOP"    
     ],
@@ -166,33 +166,23 @@ const categories = {
         "WHITNEY HOUSTON", "BOB DYLAN", "JIMI HENDRIX", "DAVID BOWIE",
         "FRANK SINATRA", "KURT COBAIN", "ADELE", "ELTON JOHN"
     ],
-    // bands: [
-    //     "THE BEATLES", "QUEEN", "ROLLING STONES", "NIRVANA",
-    //     "METALLICA", "PINK FLOYD", "THE EAGLES",
-    //     "COLDPLAY", "GREEN DAY", "LED ZEPPELIN", "FOO FIGHTERS"
-    // ],
-    // classical_composers: [
-    //     "BEETHOVEN", "MOZART", "BACH", "CHOPIN",
-    //     "TCHAIKOVSKY", "VIVALDI", "BRAHMS", "SCHUBERT",
-    //     "HANDEL", "WAGNER", "DEBUSSY", "LISZT",
-    //     "MAHLER", "ROSSINI", "RACHMANINOFF", "STRAVINSKY"
-    // ],
-    videogame_characters: [
+    bands: [
+         "THE BEATLES", "QUEEN", "ROLLING STONES", "NIRVANA",
+         "METALLICA", "PINK FLOYD", "GREEN DAY", "LED ZEPPELIN", "FOO FIGHTERS"
+     ],
+    videogames: [
         "MARIO", "LUIGI", "SONIC", "LINK",
-        "ZELDA", "LARA CROFT", "KRATOS",
-        "DONKEY KONG", "PAC MAN", "MEGA MAN", "SOLID SNAKE",
-        "KIRBY", "CLOUD"
+        "ZELDA", "TOMB RAIDER", "DONKEY KONG", 
+        "PAC MAN", "MEGA MAN", "KIRBY"
     ],
-    fairy_tales: [
+    fairytales: [
         "CINDERELLA", "SNOW WHITE", "SLEEPING BEAUTY", "RAPUNZEL",
         "PETER PAN", "PINOCCHIO", "RED RIDING HOOD", "HANSEL AND GRETEL",
         "RUMPELSTILTSKIN", "GOLDILOCKS"
     ],
-    fantasy_creatures: [
-        "DRAGON", "UNICORN", "PHOENIX", "GRIFFIN",
-        "CENTAUR", "MERMAID", "FAIRY", "GNOME",
-        "TROLL", "GOBLIN", "ORC", "WEREWOLF",
-        "VAMPIRE", "ELF", "DWARF", "GIANT"
+    fantasy: [
+        "DRAGON", "UNICORN", "PHOENIX", "GRIFFIN", "MERMAID", 
+        "FAIRY", "GNOME","TROLL", "GOBLIN", "WEREWOLF", "VAMPIRE"
     ]
 };
 
