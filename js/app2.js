@@ -63,17 +63,16 @@ const dangmanSets = [
 
 const categories = {
     colors: [
-        "PURPLE", "ORANGE", "MAROON", "SILVER",
+        "PURPLE", "ORANGE", "MAROON",
         "RED", "BLUE", "GREEN", "YELLOW",
         "PINK", "BLACK", "WHITE", "GOLD",
-        "CYAN", "MAGENTA", "BROWN", "BEIGE",
-        "AQUA", "LAVENDER", "NAVY", "TEAL"
+        "CYAN", "BROWN", "TEAL"
     ],
     countries: [
         "FRANCE", "JAPAN", "BRAZIL", "CANADA",
         "GERMANY", "INDIA", "EGYPT", "AUSTRALIA",
         "CHINA", "SPAIN", "ITALY", "MEXICO",
-        "RUSSIA", "SOUTH AFRICA", "ARGENTINA", "NORWAY"
+        "RUSSIA", "ARGENTINA", "NORWAY"
     ],
     planets: [
         "MARS", "VENUS", "JUPITER", "SATURN",
@@ -82,9 +81,9 @@ const categories = {
     ],
     cities: [
         "PARIS", "TOKYO", "LONDON", "TORONTO",
-        "NEW YORK", "LOS ANGELES", "DUBAI", "ROME",
-        "BERLIN", "SYDNEY", "CAIRO", "MOSCOW",
-        "BEIJING", "RIO DE JANEIRO", "SEOUL", "MUMBAI"
+        "NEW YORK", "LOS ANGELES", "ROME",
+        "BERLIN", "SYDNEY", "MOSCOW",
+        "BEIJING"
     ],
     fruits: [
         "APPLE", "BANANA", "ORANGE", "GRAPE",
@@ -100,7 +99,7 @@ const categories = {
     ],
     shapes: [
         "CIRCLE", "SQUARE", "TRIANGLE", "HEXAGON",
-        "RECTANGLE", "PENTAGON", "OCTAGON", "RHOMBUS"
+        "RECTANGLE", "PENTAGON", "OCTAGON"
     ],
     vehicles: [
         "CAR", "BOAT", "PLANE", "MOTORCYCLE",
@@ -115,13 +114,12 @@ const categories = {
     professions: [
         "DOCTOR", "TEACHER", "CHEF", "PILOT",
         "ENGINEER", "LAWYER", "ARTIST", "NURSE",
-        "SCIENTIST", "WRITER", "POLICE OFFICER", "FIRE FIGHTER"
+        "SCIENTIST", "POLICE OFFICER", "FIRE FIGHTER"
     ],
     sports: [
         "SOCCER", "TENNIS", "BASEBALL", "CRICKET",
         "BASKETBALL", "GOLF", "HOCKEY", "RUGBY",
-        "SWIMMING", "BOXING", "CYCLING", "SKIING",
-        "SURFING", "SKATEBOARDING", "ARCHERY", "WRESTLING"
+        "SWIMMING", "BOXING", "SKIING", "SURFING", "WRESTLING"
     ],
     flowers: [
         "ROSE", "TULIP", "LILY", "ORCHID",
@@ -142,6 +140,59 @@ const categories = {
         "COFFEE", "TEA", "JUICE", "SODA",
         "WATER", "MILK", "WINE", "BEER",
         "LEMONADE", "SMOOTHIE", "HOT CHOCOLATE"
+    ],
+    superheroes: [
+        "SUPERMAN", "BATMAN", "SPIDERMAN", "IRON MAN",
+        "WONDER WOMAN", "THOR", "CAPTAIN AMERICA", "HULK",
+        "BLACK PANTHER", "FLASH", "AQUAMAN", "GREEN LANTERN",
+        "WOLVERINE"
+    ],
+    super_villains: [
+        "JOKER", "LEX LUTHOR", "THANOS", "LOKI",
+        "GREEN GOBLIN", "VENOM", "MAGNETO", "DOCTOR DOOM",
+        "CATWOMAN", "HARLEY QUINN", "ULTRON", "RED SKULL"
+    ],
+    movie_heroes: [
+        "INDIANA JONES", "JAMES BOND", "JOHN WICK", "SARAH CONNOR",
+        "RIPLEY", "RAMBO", "MAD MAX", "JASON BOURNE", "ROBOCOP"    
+    ],
+    movies: [
+        "THE GODFATHER", "FORREST GUMP", "STAR WARS", "TITANIC", 
+        "JURASSIC PARK", "THE MATRIX", "CASABLANCA", "GLADIATOR"
+    ],
+    musicians: [
+        "ELVIS PRESLEY", "MICHAEL JACKSON", "BEYONCE", "FREDDIE MERCURY",
+        "PRINCE", "TAYLOR SWIFT", "JOHN LENNON", "MADONNA",
+        "WHITNEY HOUSTON", "BOB DYLAN", "JIMI HENDRIX", "DAVID BOWIE",
+        "FRANK SINATRA", "KURT COBAIN", "ADELE", "ELTON JOHN"
+    ],
+    // bands: [
+    //     "THE BEATLES", "QUEEN", "ROLLING STONES", "NIRVANA",
+    //     "METALLICA", "PINK FLOYD", "THE EAGLES",
+    //     "COLDPLAY", "GREEN DAY", "LED ZEPPELIN", "FOO FIGHTERS"
+    // ],
+    // classical_composers: [
+    //     "BEETHOVEN", "MOZART", "BACH", "CHOPIN",
+    //     "TCHAIKOVSKY", "VIVALDI", "BRAHMS", "SCHUBERT",
+    //     "HANDEL", "WAGNER", "DEBUSSY", "LISZT",
+    //     "MAHLER", "ROSSINI", "RACHMANINOFF", "STRAVINSKY"
+    // ],
+    videogame_characters: [
+        "MARIO", "LUIGI", "SONIC", "LINK",
+        "ZELDA", "LARA CROFT", "KRATOS",
+        "DONKEY KONG", "PAC MAN", "MEGA MAN", "SOLID SNAKE",
+        "KIRBY", "CLOUD"
+    ],
+    fairy_tales: [
+        "CINDERELLA", "SNOW WHITE", "SLEEPING BEAUTY", "RAPUNZEL",
+        "PETER PAN", "PINOCCHIO", "RED RIDING HOOD", "HANSEL AND GRETEL",
+        "RUMPELSTILTSKIN", "GOLDILOCKS"
+    ],
+    fantasy_creatures: [
+        "DRAGON", "UNICORN", "PHOENIX", "GRIFFIN",
+        "CENTAUR", "MERMAID", "FAIRY", "GNOME",
+        "TROLL", "GOBLIN", "ORC", "WEREWOLF",
+        "VAMPIRE", "ELF", "DWARF", "GIANT"
     ]
 };
 
