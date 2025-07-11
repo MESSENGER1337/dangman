@@ -63,16 +63,15 @@ const dangmanSets = [
 
 const categories = {
     colors: [
-        "PURPLE", "ORANGE", "MAROON",
+        "PURPLE", "ORANGE",
         "RED", "BLUE", "GREEN", "YELLOW",
-        "PINK", "BLACK", "WHITE", "GOLD",
-        "CYAN", "BROWN", "TEAL"
+        "PINK"
     ],
     countries: [
         "FRANCE", "JAPAN", "BRAZIL", "CANADA",
         "GERMANY", "INDIA", "EGYPT", "AUSTRALIA",
         "CHINA", "SPAIN", "ITALY", "MEXICO",
-        "RUSSIA", "ARGENTINA", "NORWAY"
+        "RUSSIA"
     ],
     planets: [
         "MARS", "VENUS", "JUPITER", "SATURN",
@@ -81,108 +80,73 @@ const categories = {
     ],
     cities: [
         "PARIS", "TOKYO", "LONDON", "TORONTO",
-        "NEW YORK", "LOS ANGELES", "ROME",
-        "BERLIN", "SYDNEY", "MOSCOW",
-        "BEIJING"
+        "NEW YORK", "BERLIN", "SYDNEY", "MOSCOW"
     ],
     fruits: [
         "APPLE", "BANANA", "ORANGE", "GRAPE",
         "MANGO", "PEACH", "KIWI", "PINEAPPLE",
-        "STRAWBERRY", "WATERMELON", "BLUEBERRY", "CHERRY",
-        "PAPAYA", "PLUM", "LEMON", "LIME"
+        "STRAWBERRY", "WATERMELON", "BLUEBERRY", 
+        "CHERRY", "LEMON", "LIME"
     ],
     animals: [
         "DOG", "CAT", "ELEPHANT", "LION",
-        "TIGER", "PENGUIN", "SNAKE", "ZEBRA",
-        "GIRAFFE", "RHINO", "KANGAROO", "BEAR",
+        "TIGER", "PENGUIN", "SNAKE", "BEAR",
         "MONKEY", "DOLPHIN", "CROCODILE", "WOLF"
     ],
     shapes: [
-        "CIRCLE", "SQUARE", "TRIANGLE", "HEXAGON",
-        "RECTANGLE", "PENTAGON", "OCTAGON"
+        "CIRCLE", "SQUARE", "TRIANGLE", "RECTANGLE"
     ],
     vehicles: [
-        "CAR", "BOAT", "PLANE", "MOTORCYCLE",
-        "BICYCLE", "BUS", "TRUCK", "HELICOPTER",
-        "TRAIN", "SUBMARINE", "SCOOTER", "TANK"
+        "CAR", "MOTORCYCLE", "TRUCK", "SCOOTER"
     ],
     instruments: [
-        "GUITAR", "PIANO", "DRUM", "VIOLIN",
-        "TRUMPET", "FLUTE", "SAXOPHONE", "HARP",
-        "CELLO", "TROMBONE", "CLARINET", "BONGO"
+        "GUITAR", "PIANO", "VIOLIN", "TRUMPET", 
+        "SAXOPHONE", "TROMBONE"
     ],
     professions: [
         "DOCTOR", "TEACHER", "CHEF", "PILOT",
-        "ENGINEER", "LAWYER", "ARTIST", "NURSE",
-        "SCIENTIST", "POLICE OFFICER", "FIRE FIGHTER"
+        "LAWYER", "NURSE", "SCIENTIST"
     ],
     sports: [
-        "SOCCER", "TENNIS", "BASEBALL", "CRICKET",
-        "BASKETBALL", "GOLF", "HOCKEY", "RUGBY",
-        "SWIMMING", "BOXING", "SKIING", "SURFING", "WRESTLING"
+        "SOCCER", "TENNIS", "BASEBALL"
+        "BASKETBALL", "HOCKEY", "BOXING"
     ],
     flowers: [
         "ROSE", "TULIP", "LILY", "ORCHID",
-        "DAISY", "SUNFLOWER", "JASMINE", "LOTUS",
-        "HIBISCUS", "LAVENDER", "VIOLET", "DAFFODIL"
+        "DAISY", "SUNFLOWER"
     ],
     mythical: [
-        "DRAGON", "UNICORN", "PHOENIX", "CENTAUR",
-        "MERMAID", "GRIFFIN", "MINOTAUR", "PEGASUS",
-        "FAIRY", "GNOME"
+        "DRAGON", "UNICORN", "MERMAID", "FAIRY"
     ],
     emotions: [
         "HAPPY", "SAD", "ANGRY", "EXCITED",
-        "SCARED", "CONFUSED", "BORED", "SURPRISED",
-        "PROUD", "JEALOUS", "RELIEVED", "NERVOUS"
+        "SCARED", "CONFUSED", "NERVOUS"
     ],
     beverages: [
         "COFFEE", "TEA", "JUICE", "SODA",
         "WATER", "MILK", "WINE", "BEER",
-        "LEMONADE", "SMOOTHIE", "HOT CHOCOLATE"
+        "LEMONADE"
     ],
     superheroes: [
-        "SUPERMAN", "BATMAN", "SPIDERMAN", "IRON MAN",
-        "WONDER WOMAN", "THOR", "CAPTAIN AMERICA", "HULK",
-        "BLACK PANTHER", "FLASH", "AQUAMAN", "GREEN LANTERN",
-        "WOLVERINE"
-    ],
-    villains: [
-        "JOKER", "LEX LUTHOR", "THANOS", "LOKI",
-        "GREEN GOBLIN", "VENOM", "MAGNETO", "DOCTOR DOOM",
-        "CATWOMAN", "HARLEY QUINN", "ULTRON", "RED SKULL"
-    ],
-    heroes: [
-        "INDIANA JONES", "JAMES BOND", "JOHN WICK", "SARAH CONNOR",
-        "RIPLEY", "RAMBO", "MAD MAX", "JASON BOURNE", "ROBOCOP"    
-    ],
-    movies: [
-        "THE GODFATHER", "FORREST GUMP", "STAR WARS", "TITANIC", 
-        "JURASSIC PARK", "THE MATRIX", "CASABLANCA", "GLADIATOR"
+        "SUPERMAN", "BATMAN", "SPIDERMAN", "IRON MAN", 
+        "FLASH", "WOLVERINE"
     ],
     musicians: [
-        "ELVIS PRESLEY", "MICHAEL JACKSON", "BEYONCE", "FREDDIE MERCURY",
-        "PRINCE", "TAYLOR SWIFT", "JOHN LENNON", "MADONNA",
-        "WHITNEY HOUSTON", "BOB DYLAN", "JIMI HENDRIX", "DAVID BOWIE",
-        "FRANK SINATRA", "KURT COBAIN", "ADELE", "ELTON JOHN"
+        "ELVIS PRESLEY", "MICHAEL JACKSON", "PRINCE", 
+        "TAYLOR SWIFT", "MADONNA", "JIMI HENDRIX", 
+        "DAVID BOWIE", "FRANK SINATRA", "ELTON JOHN"
     ],
-    bands: [
-         "THE BEATLES", "QUEEN", "ROLLING STONES", "NIRVANA",
-         "METALLICA", "PINK FLOYD", "GREEN DAY", "LED ZEPPELIN", "FOO FIGHTERS"
-     ],
     videogames: [
-        "MARIO", "LUIGI", "SONIC", "LINK",
-        "ZELDA", "TOMB RAIDER", "DONKEY KONG", 
-        "PAC MAN", "MEGA MAN", "KIRBY"
+        "MARIO", "SONIC", "ZELDA", "DONKEY KONG", 
+        "PAC MAN", "MEGA MAN"
     ],
     fairytales: [
-        "CINDERELLA", "SNOW WHITE", "SLEEPING BEAUTY", "RAPUNZEL",
-        "PETER PAN", "PINOCCHIO", "RED RIDING HOOD", "HANSEL AND GRETEL",
-        "RUMPELSTILTSKIN", "GOLDILOCKS"
+        "CINDERELLA", "SNOW WHITE", "SLEEPING BEAUTY", 
+        "PETER PAN", "PINOCCHIO"
     ],
     fantasy: [
-        "DRAGON", "UNICORN", "PHOENIX", "GRIFFIN", "MERMAID", 
-        "FAIRY", "GNOME","TROLL", "GOBLIN", "WEREWOLF", "VAMPIRE"
+        "DRAGON", "UNICORN", "MERMAID", "FAIRY", 
+        "WEREWOLF", "VAMPIRE"
     ]
 };
 
